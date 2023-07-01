@@ -1,27 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
-import {Button} from '@mui/material';
+import { Container, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button variant="text">Did this package install?</Button>
-      </header>
-    </div>
-  );
+import * as Consts from './utils/Constants';
+import AppHeader from './components/AppHeader';
+import AppFooter from './components/AppFooter';
+import AppMainContent from './components/AppMainCntnt';
+import FeatureCard from './components/FeatureCard';
+import PriceCard from './components/PriceCard';
+
+const App = () => {
+  return (<>
+    <AppHeader/>
+    <Container maxWidth={false} sx={{marginTop: "9em"}}>
+      <AppMainContent/>
+      <Grid container spacing={2} sx={{marginBottom: "10em"}}>
+        {
+          Consts.FEATURE_ENTRIES.map(entry => {
+            return (
+              <Grid item xs={4}>
+                <FeatureCard feature={entry}/>
+              </Grid>
+            )
+          })
+        }
+      </Grid>
+
+      <Container sx={{ display: "flex", flexDirection: "column", alignItems: "center"}}>
+        <Typography variant="h3" sx={{marginBottom: "2em"}}> Start your free trial today </Typography>
+        <Grid container spacing={2} sx={{marginBottom: "7em"}}>
+          {
+            Consts.PYMT_ENTRIES.map(entry => {
+              return (
+                <Grid item xs={3}>
+                  <PriceCard price={entry}/>
+                </Grid>
+              )
+            })
+          }
+        </Grid>
+      </Container>
+      <AppFooter/>
+    </Container>
+  </>)
 }
-
 export default App;
