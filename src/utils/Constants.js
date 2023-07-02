@@ -178,7 +178,7 @@ export const INTEGRATIONS = [
     {
         name: "Canva",
         desc: "Create compelling visuals for your marketing.",
-        imgUrl: ""
+        imgUrl: "https://eep.io/images/yzco4xsimv0y/egMxvwdsj41K5eESLhWBO/cf823adbd311e33919f97ffc5bf3181d/Canva.jpg?w=196&fm=avif&q=60"
     },
     {
         name: "Mailchimp for Salesforce",

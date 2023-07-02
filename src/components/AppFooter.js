@@ -1,8 +1,10 @@
 import React from "react";
+import { Container } from '@mui/material';
 
 const AppFooter = ({}) => {
     return <>
-        <p> I'm an AppFooter </p>
+        <Container maxWidth={false} sx={{backgroundColor: "primary.main", margin: "0", padding: "0", minHeight: "50em"}}>
+        </Container>
     </>
 }
 

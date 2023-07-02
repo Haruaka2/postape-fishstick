@@ -7,6 +7,7 @@ import AppFooter from './components/AppFooter';
 import AppMainContent from './components/AppMainCntnt';
 import FeatureCard from './components/FeatureCard';
 import PriceCard from './components/PriceCard';
+import IntegrationCard from './components/IntegrationCard';
 
 const App = () => {
   return (<>
@@ -25,9 +26,9 @@ const App = () => {
         }
       </Grid>
 
-      <Container sx={{ display: "flex", flexDirection: "column", alignItems: "center"}}>
-        <Typography variant="h3" sx={{marginBottom: "2em"}}> Start your free trial today </Typography>
-        <Grid container spacing={2} sx={{marginBottom: "7em"}}>
+      <Container maxWidth={false} sx={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "10em"}}>
+        <Typography variant="h3" sx={{marginBottom: "2em"}}> Start your free trial today! </Typography>
+        <Grid container spacing={5} sx={{marginBottom: "7em"}}>
           {
             Consts.PYMT_ENTRIES.map(entry => {
               return (
@@ -39,8 +40,25 @@ const App = () => {
           }
         </Grid>
       </Container>
-      <AppFooter/>
+      
+      <Container maxWidth={false} sx={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "10em"}}>
+        <Typography variant="h3" sx={{marginBottom: "2em"}}> 
+          Bring in more data, drive more growth with our integrations
+        </Typography>
+        <Grid container spacing={2} sx={{marginBottom: "7em"}}>
+          {
+            Consts.INTEGRATIONS.map(entry => {
+              return (
+                <Grid item xs={4}>
+                  <IntegrationCard integration={entry}/>
+                </Grid>
+              )
+            })
+          }
+        </Grid>
+      </Container> 
     </Container>
+    <AppFooter/>
   </>)
 }
 export default App;
