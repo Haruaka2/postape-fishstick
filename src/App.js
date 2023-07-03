@@ -2,12 +2,14 @@ import { Container, Typography } from '@mui/material';
 import { Grid } from '@mui/material';
 
 import * as Consts from './utils/Constants';
+import ForwardIcon from '@mui/icons-material/Forward';
 import AppHeader from './components/AppHeader';
 import AppFooter from './components/AppFooter';
 import AppMainContent from './components/AppMainCntnt';
 import FeatureCard from './components/FeatureCard';
 import PriceCard from './components/PriceCard';
 import IntegrationCard from './components/IntegrationCard';
+
 
 const App = () => {
   return (<>
@@ -41,21 +43,27 @@ const App = () => {
         </Grid>
       </Container>
       
-      <Container maxWidth={false} sx={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "10em"}}>
+      <Container maxWidth={false} sx={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "15em"}}>
         <Typography variant="h3" sx={{marginBottom: "2em"}}> 
           Bring in more data, drive more growth with our integrations
         </Typography>
-        <Grid container spacing={2} sx={{marginBottom: "7em"}}>
+        <Grid container spacing={2} sx={{marginBottom: "3em"}}>
           {
             Consts.INTEGRATIONS.map(entry => {
               return (
-                <Grid item xs={4}>
+                <Grid item xs={4} sx={{marginBottom: "2em"}}>
                   <IntegrationCard integration={entry}/>
                 </Grid>
               )
             })
           }
         </Grid>
+        <div style={{ display: "flex", flexDirection: "row", alignItems: "center"}}>
+          <Typography variant="h5">
+            View all 300+ Integrations
+          </Typography>
+          <ForwardIcon fontSize="large" sx={{ marginLeft: "10px", color: "primary.main"}}/>
+        </div>
       </Container> 
     </Container>
     <AppFooter/>

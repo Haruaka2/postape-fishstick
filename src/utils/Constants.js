@@ -29,7 +29,7 @@ export const PYMT_ENTRIES = [
         subtitle: "Scale fast with dedicated onboarding, unlimited contacts, and priority support; built for teams.",
         beforePriceTxt: "Starts at",
         price: "350",
-        afterPriceText: "/month based on 10,000 contacts*",
+        afterPriceTxt: "/month based on 10,000 contacts*",
         notes: [
             {
                 text: "Phone & Priority Support",
@@ -66,7 +66,7 @@ export const PYMT_ENTRIES = [
         subtitle: "Sell even more with personalization, optimization tools, and enhanced automations.",
         beforePriceTxt: "Free for 1 month. Then, starts at",
         price: "20",
-        afterPriceText: "/month based on 500 contracts",
+        afterPriceTxt: "/month based on 500 contracts",
         notes: [
             {
                 text: "24/7 Email & Chat Support",
@@ -103,7 +103,7 @@ export const PYMT_ENTRIES = [
         subtitle: "Send the right content at the right time with testing and scheduling features.",
         beforePriceTxt: "Free for 1 month, Then starts at",
         price: "13",
-        afterPriceText: "/month based on 500 contacts",
+        afterPriceTxt: "/month based on 500 contacts",
         notes: [
             {
                 text: "24/7 Email & Chat Support",
@@ -140,7 +140,7 @@ export const PYMT_ENTRIES = [
         subtitle: "Easily create email campaigns and learn more about your customers.",
         beforePriceTxt: "",
         price: "0",
-        afterPriceText: "/month based on 500 contacts",
+        afterPriceTxt: "/month based on 500 contacts",
         notes: [
             {
                 text: "Email support for first 30 days",
@@ -221,3 +221,57 @@ export const INTEGRATIONS = [
         imgUrl: "https://eep.io/images/yzco4xsimv0y/26deBkGp3A5Pj7suZ9oV7V/858e8a4603707166988a3282bca7e29b/Zapier.jpg?w=196&fm=webp&q=70"
     }
 ];
+
+export const LINKS = [
+    {
+        header: "Products",
+        links: [
+            "Why Mailchimp?",
+            "Product Updates",
+            "Email Marketing",
+            "Websites",
+            "Transactional Email",
+            "How We Compare",
+            "GDPR Compliance",
+            "Security",
+            "Status",
+            "Mobile App",
+        ]
+    },
+    {
+        header: "Resources",
+        links: [
+            "Marketing Library",
+            "Free Marketing Tools",
+            "Marketing Glossary",
+            "Integrations Directory",
+        ]
+    },
+    {
+        header: "Community",
+        links: [
+            "Agencies & Freelancers",
+            "Developers",
+            "Events",
+        ]
+    },
+    {
+        header: "Company",
+        links: [
+            "Our Story",
+            "Newsroom",
+            "Give Where You Live",
+            "Careers",
+            "Accessibility",
+        ]
+    },
+    {
+        header: "Help",
+        links: [
+            "Contact Us",
+            "Hire an Expert",
+            "Help Center",
+            "Talk to Sales",
+        ]
+    }
+]
